@@ -1,0 +1,14 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Obsidian local UI state (per-machine, not worth syncing)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+**/.obsidian/workspace.json
+**/.obsidian/workspace-mobile.json
+
+# Editor / tooling caches
+.trash/
+*.tmp

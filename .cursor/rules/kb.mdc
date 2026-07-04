@@ -1,0 +1,32 @@
+---
+description: Shuaikx 个人知识库 — INGEST / QUERY / LINT 工作流
+globs:
+  - raw/**
+  - wiki/**
+  - AGENTS.md
+alwaysApply: false
+---
+
+# Knowledge Base Rules
+
+本仓库是 Karpathy 式 LLM Wiki 个人知识库。完整规范见 `AGENTS.md`，计划见 `KB_BUILD_PLAN.md`。
+
+## 识别命令
+
+- `INGEST: <path>` — 编译 raw 到 wiki，更新 index + log
+- `QUERY:` 或 `QUERY: deep` — 基于 wiki 问答，≥3 页引用时建议保存 insight
+- `LINT` — wiki 健康检查
+
+## 硬规则
+
+1. **永不修改** `raw/` 下文件
+2. **每次 wiki 变更**必须更新 `wiki/index.md` 和 `wiki/log.md`
+3. wiki 页使用统一 frontmatter（type, topic, sources, confidence, date_updated, status）
+4. 每页含 `## For Agent` 段
+5. 用 `[[wikilinks]]` 交叉引用
+6. 矛盾标注，不静默覆盖
+7. 不把 `KB_BUILD_PLAN.md`、`Karpathy_LLM_KB.md` 编入 wiki
+
+## Session
+
+开始读 `wiki/hot.md`；结束更新 `wiki/hot.md`。
