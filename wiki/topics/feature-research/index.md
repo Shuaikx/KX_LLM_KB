@@ -1,41 +1,36 @@
 ---
 type: synthesis
 topic: feature-research
-confidence: 1.0
-date_updated: 2026-07-03
+aliases:
+  - 功能调研课题
+sources: []
+confidence: 0.85
+date_updated: 2026-07-13
 status: current
 tags:
   - wiki/synthesis
   - topic/feature-research
 ---
 
+# 功能调研 / 调试 — 课题综述
+
 ## For Agent
 
-功能调研课题索引。用于新功能调研、方案对比、问题排查记录。ingest 后在此列出本课题页面。
+本课题收录工具改造与问题排查记录。当前主线是 Unity 编辑器工具 [[AttrViewer]]（属性系统查看器）的一系列升级，以及配置协议（proto/pb）解码失败的排查。核心可复用经验见各 insight 页。
 
-# 功能调研（feature-research）
+## 来源
 
-## 范围
+- [[AttrViewer-TreeView-ID冲突修复]] — TreeView 多选高亮 Bug 根因与修复
 
-- 新功能可行性分析
-- 技术方案对比
-- Bug 排查与修复记录（可沉淀为 insight）
+## 概念
 
-## 本课题页面
+[[unity-treeview-id]]
 
-### Sources
+## 实体
 
-_（尚无 ingest）_
+[[AttrViewer]]
 
-### Concepts
+## 分析 / 调试记录（insights）
 
-_（尚无 ingest）_
-
-### Entities
-
-_（尚无 ingest）_
-
-## 相关
-
-- [[wiki/index|全局目录]]
-- [[wiki/topics/ui-spec/index|UI 规范]]
+- [[attrviewer-upgrade]] — AttrViewer 三项升级（Bug 修复 + 自动刷新 + VS Code 风格 UI）
+- [[skillconf-pbin-decode-fix]] — SkillConfData pbin 解码失败的 proto 修复

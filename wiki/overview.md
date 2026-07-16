@@ -1,42 +1,31 @@
 ---
 type: synthesis
-confidence: 1.0
-date_updated: 2026-07-03
+sources: []
+confidence: 0.9
+date_updated: 2026-07-13
 status: current
 tags:
   - wiki/synthesis
 ---
 
+# 知识库总览
+
 ## For Agent
 
-本页是 Shuaikx 知识库总览入口。列出所有课题、核心概念枢纽和近期动态。ingest 或 lint 后应检查本页是否需要更新。
+这是 Shuaikx 个人知识库的门户页。知识库遵循 Karpathy LLM Wiki 模式：`raw/` 放只读原始资料，`wiki/` 是 LLM 编译出的结构化知识。当前覆盖三个课题：[[UI规范课题|UI 规范]]、[[功能调研课题|功能调研/调试]]、[[Agent工具链课题|Agent 工具链]]。入口从 [[全局目录]] 进入，会话上下文见 [[hot]]。
 
-# Shuaikx 知识库总览
+## 课题地图
 
-## 定位
+| 课题 | 综述页 | 主题 |
+|------|--------|------|
+| UI 规范 | [[UI规范课题]] | AOE3D UI 组件形态、UGUI 改造、CtrlData、统一交互规范 |
+| 功能调研/调试 | [[功能调研课题]] | AttrViewer 工具、配置解码修复等调试记录 |
+| Agent 工具链 | [[Agent工具链课题]] | Agent/Tool/Hook/MCP 概念与工具生态 |
 
-工作技术笔记 + 课题研究的知识库，采用 **raw → wiki 编译** 模式。Agent（Cursor / Claude Code）维护 wiki，人类负责策展与提问。
+## 三层结构
 
-## 课题
+- **Raw**（`raw/`）：只读原始资料，按课题分目录。
+- **Wiki**（`wiki/`）：source（原文摘要）/ concept（概念）/ entity（实体）/ insight（分析）四类页面。
+- **Schema**（`AGENTS.md`）：维护规范与 INGEST / QUERY / LINT 三操作。
 
-| 课题 | 说明 | 索引 |
-|------|------|------|
-| UI 规范 | AOE3D UI 组件、iwiki 规范、控件库 | [[wiki/topics/ui-spec/index]] |
-| 功能调研 | 新功能调研、方案对比、问题排查 | [[wiki/topics/feature-research/index]] |
-
-## 核心索引
-
-- [[wiki/index|全局目录]]
-- [[wiki/log|操作日志]]
-- [[wiki/hot|Session 热缓存]]
-
-## 当前状态
-
-- **Phase 0** 已完成：目录骨架、Schema、种子页
-- **Phase 1** 进行中：已 ingest `UI组件.md`（1 source + 3 concepts + 2 entities）
-- **条目数**：6 wiki 页
-
-## 相关文档
-
-- [[KB_BUILD_PLAN|构建计划]]
-- [[AGENTS|Agent Schema]]
+在 Obsidian 中打开仓库根目录即可浏览本库与关系图。

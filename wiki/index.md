@@ -1,44 +1,63 @@
 ---
 type: synthesis
-confidence: 1.0
-date_updated: 2026-07-03
+aliases:
+  - 全局目录
+sources: []
+confidence: 0.9
+date_updated: 2026-07-13
 status: current
 tags:
-  - wiki/index
+  - wiki/synthesis
 ---
+
+# 全局目录
 
 ## For Agent
 
-全局 wiki 目录。每次 INGEST、新建 insight、LINT 修复后必须更新。格式：`- [[路径|标题]] — 一行摘要`
+知识库全局导航。按课题与页面类型索引所有 wiki 页，每条一行摘要。门户见 [[overview]]，会话上下文见 [[hot]]，操作日志见 [[log]]。
 
-# Wiki Index
+## 课题综述
 
-> 最后更新：2026-07-03
+- [[UI规范课题]] — AOE3D UI 组件形态、UGUI 改造、CtrlData、统一交互
+- [[功能调研课题]] — AttrViewer 工具与配置解码等调试记录
+- [[Agent工具链课题]] — Agent/Tool/Hook/MCP 概念与工具生态
 
-## 总览
+## Sources（原文摘要）
 
-- [[wiki/overview|知识库总览]] — 入口与课题列表
+- [[UI组件]] — AOE3D UI 组件形态（前缀）与容器控件总览
+- [[iwiki-4013196232]] — iWiki UI 基建文档树（22+ 篇）总结
+- [[UGUI-CtrlData机制]] — UGUI 改造与 CtrlData 三层结构详解
+- [[AttrViewer-TreeView-ID冲突修复]] — TreeView 多选高亮 Bug 修复
+- [[Agent-Tool-Hook-MCP-rtk]] — 用 rtk 案例解析 Agent/Tool/Hook/MCP
 
-## 课题
+## Concepts（概念）
 
-- [[wiki/topics/ui-spec/index|UI 规范]] — AOE3D UI 组件与规范（1 source）
-- [[wiki/topics/feature-research/index|功能调研]] — 功能调研与方案对比
+- [[prefab-screen-forms]] — Prefab 屏幕形态（Menu/PopupBox/Pan/ListItem/Hud/Float 前缀）
+- [[ui-layer-stack]] — UI 层级栈（约 20 层 UILayer）
+- [[ui-containers]] — 容器控件两范式（ListBox vs TemplateBox）
+- [[ctrldata-bridge]] — CtrlData 桥（表现/逻辑分离核心）
+- [[centralized-ui-update]] — 集中式 UI Update（UGUIUpdateMgr）
+- [[unified-ui-interaction]] — 统一交互/弹窗/提示体系
+- [[ui-rendering-pitfalls]] — UI 渲染/适配疑难排查
+- [[agent-tool-hook-mcp]] — Agent·Tool·Hook·MCP 四概念
+- [[unity-treeview-id]] — Unity TreeView 整数 id 选中机制
 
-## Sources
+## Entities（实体）
 
-- [[wiki/sources/UI组件|UI 组件形式说明]] — Prefab 前缀与容器控件总览
+- [[ListBox]] — 滚动虚拟列表容器
+- [[TemplateBox]] — 固定槽位模板容器
+- [[RootPanel]] — Prefab 根节点，CtrlData 宿主
+- [[CanvasPanel]] — 界面根节点（Canvas/动画/安全区）
+- [[UIListViewEasy]] — ListBox 的 Lua 封装列表控制器
+- [[AttrViewer]] — Unity 属性系统查看器
+- [[rtk]] — Rust Token Killer（PreToolUse Hook 压缩工具）
 
-## Concepts
+## Insights（分析 / 记录）
 
-- [[wiki/concepts/prefab-screen-forms|Prefab 屏幕形态]] — Menu_/PopupBox_/ListItem_ 等前缀体系
-- [[wiki/concepts/ui-containers|UI 容器选型]] — ListBox vs TemplateBox
-- [[wiki/concepts/ui-layer-stack|UI 层级与继承]] — UILayer 与管理 API
+- [[attrviewer-upgrade]] — AttrViewer 三项升级（Bug 修复 + 自动刷新 + UI 改造）
+- [[skillconf-pbin-decode-fix]] — SkillConfData pbin 解码失败的 proto 修复
+- [[listcondition-listvieweasy]] — ListCondition 字段为何是 ListViewEasy
 
-## Entities
+## 待办
 
-- [[wiki/entities/ListBox|ListBox]] — 滚动列表容器
-- [[wiki/entities/TemplateBox|TemplateBox]] — 固定槽位容器
-
-## Insights
-
-_（尚无 query 回填）_
+- `Agents_概念.md`（空文件）暂留根目录，待补充内容后 ingest。

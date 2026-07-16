@@ -20,6 +20,7 @@
 |------|------|----------|-----------|
 | `ui-spec` | UI 规范 | `raw/topics/ui-spec/` | `wiki/topics/ui-spec/` |
 | `feature-research` | 功能调研 | `raw/topics/feature-research/` | `wiki/topics/feature-research/` |
+| `agent-tooling` | Agent 工具链 | `raw/topics/agent-tooling/` | `wiki/topics/agent-tooling/` |
 
 未分类资料暂放 `raw/inbox/`，ingest 前需确定 topic。
 
